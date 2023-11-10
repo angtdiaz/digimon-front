@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "digimon-back": {
+      "hosting": {
+        "digimon-front": [
+          "digimon-back"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "digimon-back"
+  }
+}
