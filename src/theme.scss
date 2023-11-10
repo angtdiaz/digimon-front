@@ -1,24 +1,25 @@
 @use "@angular/material" as mat;
 
+// Define your custom color configurations with new primary and accent colors
 $primary-palette: (
-  50: #dce1f4,
-  100: #c2ccec,
-  200: #92a0d9,
-  300: #6274c6,
-  400: #3a5ba9,
-  // primary color
-  500: #324e93,
-  600: #2a417d,
-  700: #223567,
-  800: #1a2951,
-  900: #121d3b,
+  50: #e8f0fa,
+  100: #c6d9f1,
+  200: #a1bfe8,
+  300: #7ba6df,
+  400: #5e91d6,
+  // Your new primary color
+  500: #0b4b6f,
+  600: #0a4566,
+  700: #093e5c,
+  800: #083752,
+  900: #062f43,
   contrast: (
     50: black,
     100: black,
     200: black,
-    300: white,
+    300: black,
     400: white,
-    // primary color contrast
+    // Your new primary color contrast
     500: white,
     600: white,
     700: white,
@@ -28,24 +29,24 @@ $primary-palette: (
 );
 
 $accent-palette: (
-  50: #ffe7e0,
-  100: #ffd0c2,
-  200: #ffa389,
-  300: #ff7651,
-  400: #ff511f,
-  // accent color
-  500: #e6471b,
-  600: #cc3d17,
-  700: #b33313,
-  800: #99290f,
-  900: #7f1f0b,
+  50: #fdf4e4,
+  100: #fbe3bc,
+  200: #f9d091,
+  300: #f7bd66,
+  400: #f5af44,
+  // Your new accent color
+  500: #f3a024,
+  600: #e19522,
+  700: #cf891f,
+  800: #bd7e1c,
+  900: #a66f18,
   contrast: (
     50: black,
     100: black,
     200: black,
     300: black,
-    400: white,
-    // accent color contrast
+    400: black,
+    // Your new accent color contrast
     500: white,
     600: white,
     700: white,
