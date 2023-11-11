@@ -12,7 +12,7 @@ export const environment = {
     messagingSenderId: '989691601532',
   },
   production: false,
-  baseUrl: 'http://127.0.0.1:8000/api/',
+  baseUrl: 'https://digimon-back-kk45rljnwq-uc.a.run.app/api/',
 };
 
 /*
