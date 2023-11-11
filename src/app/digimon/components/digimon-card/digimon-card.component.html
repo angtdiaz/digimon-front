@@ -1,0 +1,25 @@
+<div
+  class="max-w-sm rounded overflow-hidden bg-gray-200 px-2 pt-2 hover:scale-110 transition-all cursor-pointer hover:shadow-2xl hover:px-0 hover:pt-0"
+>
+  <!-- Contenedor de la imagen con clases de Tailwind para el tamaño y cubrimiento -->
+  <div
+    class="w-full h-60 bg-black flex justify-center items-center overflow-hidden relative"
+  >
+    <img
+      class="object-cover object-center w-full h-full"
+      [src]="digimon.image"
+      alt="Digimon Image"
+    />
+    <!-- Contenedor para el nombre con fondo opaco -->
+    <div class="absolute bottom-0 left-0 w-full">
+      <div class="bg-black opacity-20 hover:opacity-100 p-7"></div>
+      <div class="absolute bottom-0 left-0 w-full p-4">
+        <div
+          class="font-bold text-xl text-center text-white truncate overflow-hidden whitespace-nowrap"
+        >
+          {{ digimon.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
