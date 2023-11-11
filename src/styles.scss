@@ -4,4 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family:  "Montserrat", sans-serif; }
+
+
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-outlined-button,
+.mat-mdc-unelevated-button {
+  padding: 20px 20px  !important;
+  border-radius: 9999px !important;
+}
+
+.mat-mdc-dialog-container {
+    .mdc-dialog__surface {
+      border-radius: 16px !important;
+    }
+  }
