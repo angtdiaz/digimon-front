@@ -17,7 +17,7 @@ Asegúrate de tener Node.js y npm instalados en tu máquina antes de seguir esto
    ```bash
    git clone https://github.com/angtdiaz/digimon-front.git
    ```
-2. ** Dirígete al repositorio:**
+2. **Dirígete al repositorio:**
    
    ```bash
    cd digimon-front
