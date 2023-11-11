@@ -5,12 +5,25 @@ import {
   redirectLoggedInTo,
   redirectUnauthorizedTo,
 } from '@angular/fire/auth-guard';
+import { FullComponent } from './layout/full/full.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'auth',
-    pathMatch: 'full',
+    component: FullComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['auth/login'])),
+    children: [
+      {
+        path: 'digimon',
+        loadChildren: () =>
+          import('./digimon/digimon.module').then((m) => m.DigimonModule),
+      },
+      {
+        path: '', // Ruta vacía que redirige a 'home'
+        redirectTo: 'digimon',
+        pathMatch: 'full',
+      },
+    ],
   },
   {
     path: 'auth',
@@ -19,12 +32,6 @@ const routes: Routes = [
       import('./authentication/authentication.module').then(
         (m) => m.AuthenticationModule
       ),
-  },
-  {
-    path: 'digimon',
-    ...canActivate(() => redirectUnauthorizedTo(['auth/login'])),
-    loadChildren: () =>
-      import('./digimon/digimon.module').then((m) => m.DigimonModule),
   },
 ];
 
