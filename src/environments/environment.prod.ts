@@ -8,4 +8,5 @@ export const environment = {
     messagingSenderId: '989691601532',
   },
   production: true,
+  baseUrl: 'https://digimon-back-kk45rljnwq-uc.a.run.app/api/',
 };
