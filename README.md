@@ -1,27 +1,36 @@
-# DigimonFront
+# Digimon Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+Este proyecto utiliza Angular 16 para crear una página web interactiva para visualizar información de Digimons.
+
+## Tecnologías Utilizadas
+
+- Angular: 16.2.9
+- Node: 16.16.0
+- npm: 8.11.0
+
+## Configuración del Entorno
+
+Asegúrate de tener Node.js y npm instalados en tu máquina antes de seguir estos pasos.
+
+1. **Clona el repositorio:**
+
+   ```bash
+   git clone https://github.com/angtdiaz/digimon-front.git
+   ```
+2. ** Dirígete al repositorio:**
+   
+   ```bash
+   cd digimon-front
+   ```
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ejecuta el comando `ng serve` para levantar el proyecto en modo desarrollo. Por defecto se levantará en: `http://localhost:4200/`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ejecuta `ng build` para compilar el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`.
 
-## Running unit tests
+## Ayuda Adicional
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para obtener más ayuda sobre Angular CLI, utiliza `ng help` o consulta la [Descripción General y Referencia de Comandos de Angular CLI](https://angular.io/cli).
