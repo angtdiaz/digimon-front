@@ -49,6 +49,11 @@ export class RegisterComponent implements OnInit {
       ],
     });
   }
+  firabaseResponses: { [key: string]: string } = {
+    'auth/invalid-email': 'Por favor, ingrese un correo válido.',
+    'auth/email-already-in-use':
+      'El correo electrónico ya se encuentra en uso.',
+  };
   /**
    * Signs up the user with the provided email and password.
    * If the sign up is successful and the user's email is verified,
@@ -87,11 +92,14 @@ export class RegisterComponent implements OnInit {
       })
       .catch((err: FirebaseError) => {
         this.isLoading = false;
+        const errorMessage =
+          this.firabaseResponses[err.code] ||
+          'Ha ocurrido un error inesperado: ' + err.message;
         this._dialog.open(ConfirmationDialogComponent, {
           width: '400px',
           data: {
             title: 'Error',
-            message: err.message,
+            message: errorMessage,
             type: 'error',
             showIcon: true,
           } as ConfirmationDialogData,
