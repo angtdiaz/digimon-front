@@ -1,0 +1,13 @@
+<div
+  class="flex p-2 w-full justify-end md:justify-between bg-white shadow-sm z-30 fixed top-0 h-16 items-center"
+>
+  <span class="text-lg font-medium text-primary hidden md:flex"
+    >DIGIMON OFFICIAL SITE</span
+  >
+  <div class="flex items-center">
+    <span class="hidden md:flex">{{ user?.email }}</span>
+    <button mat-icon-button (click)="signOut()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</div>
