@@ -1,0 +1,111 @@
+<div
+  class="flex flex-col flex-auto items-center sm:justify-center min-w-0 h-full justify-center bg-primary-100 relative"
+>
+  <!-- <img src="assets/images/agumon-flying.png" class="absolute h-52 top-16" /> -->
+  <div
+    class="w-full sm:w-3/4 lg:w-1/2 sm:pr-6 rounded-2xl sm:bg-card bg-white shadow-2xl z-20 flex overflow-hidden"
+  >
+    <div class="sm:flex justify-center items-center w-1/2 bg-accent-100 hidden">
+      <div class="w-30 text-center">
+        <img src="assets/images/digimon_logo_2.png" />
+      </div>
+    </div>
+    <div
+      class="w-full sm:w-1/2 mx-auto sm:mx-0 px-6 sm:px-6 lg:px-9 py-14 sm:py-16 lg:py-20"
+    >
+      <!-- Logo -->
+      <div class="w-full text-center justify-center flex sm:hidden">
+        <img src="assets/images/digimon_logo_2.png" class="w-60" />
+      </div>
+      <!-- Title -->
+      <div
+        class="mt-4 text-3xl text-center text-primary-500 font-extrabold tracking-tight leading-tight"
+      >
+        Inicia sesión
+      </div>
+
+      <!-- Sign in form -->
+      <form class="mt-8" [formGroup]="signInForm">
+        <!-- Email field -->
+        <mat-form-field class="w-full" [appearance]="'fill'">
+          <mat-label>Correo</mat-label>
+          <input id="email" matInput [formControl]="email" />
+          <mat-error *ngIf="email!.hasError('required')">
+            Correo es requerido
+          </mat-error>
+          <mat-error *ngIf="email!.hasError('email')">
+            Por favor ingrese un email válido
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Password field -->
+        <mat-form-field class="w-full">
+          <mat-label>Contraseña</mat-label>
+          <input
+            id="password"
+            matInput
+            type="password"
+            [formControl]="password"
+            #passwordField
+          />
+          <button
+            mat-icon-button
+            type="button"
+            (click)="
+              passwordField.type === 'password'
+                ? (passwordField.type = 'text')
+                : (passwordField.type = 'password')
+            "
+            matSuffix
+          >
+            <mat-icon
+              *ngIf="passwordField.type === 'password'"
+              [svgIcon]="'heroicons_solid:eye'"
+            ></mat-icon>
+            <mat-icon
+              *ngIf="passwordField.type === 'text'"
+              [svgIcon]="'heroicons_solid:eye-slash'"
+            ></mat-icon>
+          </button>
+          <mat-error *ngIf="password.hasError('required')">
+            Contraseña es requerida
+          </mat-error>
+          <!-- mat error de min length -->
+          <mat-error *ngIf="password.hasError('minlength')">
+            La contraseña debe tener al menos 6 caracteres
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Submit button -->
+        <button
+          class="w-full mt-4"
+          mat-flat-button
+          [color]="'primary'"
+          [disabled]="signInForm.invalid || isLoading"
+          (click)="signIn()"
+        >
+          <span *ngIf="!isLoading"> Iniciar sesión </span>
+
+          <mat-progress-spinner
+            *ngIf="isLoading"
+            [diameter]="24"
+            [mode]="'indeterminate'"
+          ></mat-progress-spinner>
+        </button>
+
+        <div
+          class="flex items-baseline mt-3 font-medium opacity-80 justify-between"
+        >
+          <div>No tienes una cuenta?</div>
+          <a
+            class="text-primary-500 hover:underline"
+            [routerLink]="['/auth/register']"
+            >Regístrate
+          </a>
+        </div>
+
+        <!-- Separator -->
+      </form>
+    </div>
+  </div>
+</div>
